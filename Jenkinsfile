@@ -28,12 +28,16 @@ pipeline {
          stage('Config') {
 
             steps {
-                dir('terraform/') {
-                    sh 'cp /var/lib/jenkins/workspace/provider.tf .'
-
-                sh "sudo terraform init"
+                  parallel(
+                             Configurando_Infra: {
+                                   dir('terraform/') {
+                                   sh 'cp /var/lib/jenkins/workspace/provider.tf .'
+                                   sh "sudo terraform init"
+                   },
+                                Configurando_Aplicacao:{
+                                                        }
+                                 )
                 }
-                echo 'Configuring..'
             }
         }
         
