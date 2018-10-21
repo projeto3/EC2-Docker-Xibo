@@ -5,7 +5,7 @@ Neste diretório você encontrar os procedimentos para realizar o deploy da apli
 
 -- Procedimentos manuais
 
-**Instalação CMS
+** Instalação CMS
 
 mkdir /opt/xibo
 cd /opt/xibo
