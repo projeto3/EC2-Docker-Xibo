@@ -22,7 +22,7 @@ cp config.env.template config.env
 
 nano config.env
 
-**Salve suas alterações e saia
+** Salve suas alterações e saia
 
 **Agora vamos subir o CMS
 
