@@ -28,7 +28,7 @@ Agora vamos subir o CMS
 
     docker-compose up -d
 
-O CMS será baixado e executado e você poderá fazer o login no endereço IP do seu servidor//
+O CMS será baixado e executado e você poderá fazer o login no endereço IP do seu servidor
 
 # Configuração do Firewall
 Configurará o ufw firewall com as portas certas abertas para HTTP, SSH e XMR:
@@ -49,7 +49,7 @@ precisamos parar a execução do CMS, já que precisaremos da porta 80 para o no
     docker-compose down
 
 Vamos agora mover o Xibo para um número de porta diferente. Estaremos seguindo as instruções no manual 
-aqui sob o título "usando portas diferentes": http://xibo.org.uk/manual-tempel/en/install_cms.html//
+aqui sob o título "usando portas diferentes": http://xibo.org.uk/manual-tempel/en/install_cms.html
 
     cp cms_custom-ports.yml.template cms_custom-ports.yml
 
@@ -128,7 +128,7 @@ Agora vamos proteger esse Container com um servidor Apache e um certificado SSL 
     a2enmod proxy
     a2enmod proxy_http
 
-Agora edite o arquivo de configuração padrão do apache para criar um proxy reverso para o nosso contêiner://
+Agora edite o arquivo de configuração padrão do apache para criar um proxy reverso para o nosso contêiner:
 
     nano /etc/apache2/sites-available/000-default.conf
 
@@ -154,7 +154,7 @@ Salve suas alterações e reinicie o Apache
     service apache2 restart
 
 Nosso CMS agora deve estar disponível na porta 80.
-Se você está usando o ufw, vamos colocar uma regra para o tráfego de https agora//
+Se você está usando o ufw, vamos colocar uma regra para o tráfego de https agora
 
     ufw allow 443/tcp
 
