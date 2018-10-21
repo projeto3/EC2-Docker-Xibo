@@ -7,13 +7,13 @@ Neste diretório você encontrar os procedimentos para realizar o deploy da apli
 
 # Instalação CMS
 
-mkdir /opt/xibo
-cd /opt/xibo
+    mkdir /opt/xibo
+    cd /opt/xibo
 
-wget https://github.com/xibosignage/xibo-cms/releases/download/1.8.11/xibo-docker.tar.gz
-tar --strip 1 -zxvf xibo-docker.tar.gz
+    wget https://github.com/xibosignage/xibo-cms/releases/download/1.8.11/xibo-docker.tar.gz
+    tar --strip 1 -zxvf xibo-docker.tar.gz
 
- Precisamos criar um arquivo config.env de acordo com o guia de instalação. 
+Precisamos criar um arquivo config.env de acordo com o guia de instalação. 
 Vamos fazer isso, garantindo que definimos um valor MYSQL_PASSWORD. Isso deve ser apenas alfanumérico. ou seja, 
 composto por AZ az 0-9. Sem espaços, pontuação ou outros caracteres especiais. Por exemplo, algo como BTvjCyqQEZ8kGPrb funcionaria. 
 Claramente não use essa senha
