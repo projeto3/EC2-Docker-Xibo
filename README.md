@@ -8,9 +8,9 @@ Listagem de diretórios e arquivos:
 		
 	Ansible - Arquivos e procedimentos para a gestão de configuração do ambiente.
 	Docker - Arquivos e procedimentos para deploy da aplicação com docker e docker-compose.
-	Terraform - Arquivos e procedimentos para deploy da infraestrutura na AWS (infra as code).
+	Terraform - Arquivos e procedimentos para deploy da infraestrutura na AWS (infra as a code).
   	Jenkinsfile - Arquivo que contém a definição do pipeline Jenkins.
-	teste.sh - Arquivo em Shell Script reponsável por realizar testes no ambiente.
+	teste.sh - Arquivo em Shell Script reponsável por realizar testes no ambiente e na aplicação.
 
 Procedimeto para configuração do ambiente
 	
