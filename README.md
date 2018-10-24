@@ -26,7 +26,7 @@ O projeto consiste na criação de um pipeline de entrega continua de infraestru
 Siga o passo a passo da documentação official - https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html
 
 # Configurando o Jenkins
-- Após a instalação do servidor Jenkins será necessários fazer alguns ajustes. Para que o Jenkins acesse a aws é necessário salvar o access_key em váriavel e depois exportar-la para todos sistema operacional do servidor jenkins.
+- Após a instalação do servidor Jenkins será necessários fazer alguns ajustes. Para que o Jenkins acesse a aws é necessário salvar o access_key em váriavel e depois exportar-la para todo sistema operacional do servidor jenkins.
 - Instale o seguintes plugins no jenkins
 	- Amazon web services sdk
 	- Ansible plugin
