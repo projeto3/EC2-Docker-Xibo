@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Salva o endereço dns publico da instância
 aws_dns=$(cat terraform/aws_dns.txt)
 echo "$aws"
 
