@@ -1,1 +1,1 @@
-# Infraestrutura como código (IAC) usando o terraform.
+# Infraestrutura como código (IAC) usando terraform.
