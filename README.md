@@ -4,25 +4,25 @@ Repositório da disciplina projeto integrador III.
 
 O projeto consiste na criação de um pipeline de entrega continua de infraestrutra na aws.
 
-Neste repositorio conterá os arquivos e procedimentos necessários para cria um pipeline de entrega continua de uma aplicação e sua infraestrutura utilizando as tecnologias Github, Jenkins, Terraform, Ansible, Shell Script, Docker,Docker-compose e Amazon Web Services.
+- Neste repositorio conterá os arquivos e procedimentos necessários para cria um pipeline de entrega continua de uma aplicação e sua infraestrutura utilizando as tecnologias Github, Jenkins, Terraform, Ansible, Shell Script, Docker, Docker-compose e Amazon Web Services.
 
-Listagem de diretórios e arquivos:
+- Listagem de diretórios e arquivos:
 		
-	Ansible - Arquivos e procedimentos para a gestão de configuração do ambiente.
-	Docker - Arquivos e procedimentos para deploy da aplicação com docker e docker-compose.
-	Terraform - Arquivos e procedimentos para deploy da infraestrutura na AWS (infra as a code).
-  	Jenkinsfile - Arquivo que contém a definição do pipeline Jenkins.
-	teste.sh - Arquivo em Shell Script reponsável por realizar testes no ambiente e na aplicação.
+	- Ansible - Arquivos e procedimentos para a gestão de configuração do ambiente.
+	- Docker - Arquivos e procedimentos para deploy da aplicação com docker e docker-compose.
+	- Terraform - Arquivos e procedimentos para deploy da infraestrutura na AWS (infra as a code).
+  	- Jenkinsfile - Arquivo que contém a definição do pipeline Jenkins.
+	- teste.sh - Arquivo em Shell Script reponsável por realizar testes no ambiente e na aplicação.
 
-Procedimeto para configuração do ambiente
+- Procedimeto para configuração do ambiente
 	
-	Instale um servidor jenkins - mais informações sobre a instalação (https://jenkins.io/doc/).
-	Instale o terraform na maquina Jenkins - mais informações sobre a instalação (https://www.terraform.io/docs/index.html).
-	Instale o ansible na máquina Jenkins - mais informações sobre a instalação (https://www.ansible.com/).
-	Tenha uma conta na AWS - mais informações de como criar uma conta (https://aws.amazon.com/).
+	- Instale um servidor jenkins - mais informações sobre a instalação (https://jenkins.io/doc/).
+	- Instale o terraform na maquina Jenkins - mais informações sobre a instalação (https://www.terraform.io/docs/index.html).
+	- Instale o ansible na máquina Jenkins - mais informações sobre a instalação (https://www.ansible.com/).
+	- Tenha uma conta na AWS - mais informações de como criar uma conta (https://aws.amazon.com/).
 	
 # Criando ACCESS_KEY na AWS
-Para que o Jenkins possa acessar o recursos da AWS é necessária criar um access_key.
+- Para que o Jenkins possa acessar o recursos da AWS é necessária criar um access_key.
 Siga o passo a passo da documentação official - https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html
 
 # Configurando o Jenkins
