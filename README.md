@@ -19,6 +19,15 @@ Procedimeto para configuração do ambiente
 	Instale o ansible na máquina Jenkins - mais informações sobre a instalação (https://www.ansible.com/).
 	Tenha uma conta na AWS - mais informações de como criar uma conta (https://aws.amazon.com/).
 	
+# Criando ACCESS_KEY na AWS
+Para que o Jenkins possa acessar o recursos da AWS é necessária criar um access_key.
+Siga o passo a passo da docmuentação official - https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html
+
+# Configurando o Jenkins
+Após a instalação do servidor Jenkins será necessários fazer uns ajustes. Para que o Jenkins acesse a aws é necessário salvar o access_key em váriavel e depois exportar essa váriavel para todos sistema operacional do servidor jenkins.
+
+
+
 
 Executando os procedimentos acima,será criado uma instancia EC2 na AWS.
 
