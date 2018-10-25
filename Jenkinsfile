@@ -46,15 +46,31 @@ pipeline {
                     dir('terraform/') {
                         sh "sudo terraform apply -auto-approve"
                         sh 'terraform output aws_dns > aws_dns.txt'
+                        
                     }
                     echo 'Criando Instancia...'
             }
         
         }
+                      
+    stage('Config ambiente') {
+
+            steps {
+                dir('ansible/'){
+                    sh "cat aws_dns.txt > hosts"
+                    sh "ansible-playbook -i hosts -f play-updateOS.yml"
+                    sh "ansible-playbook -i hosts -f play-installDocker.yml"
+                }
+                echo 'Config....'
+            }
+        }
         
     stage('Deploy') {
 
-            steps {                
+            //steps {
+                //dir('ansible/'){
+                    //sh "ansible-playbook -i hosts -f play-deployApp.yml"
+                //}
                 echo 'Deploying....'
             }
         }
