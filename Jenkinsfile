@@ -36,7 +36,9 @@ pipeline {
                                    }   
                                  },
                                 Configurando_Aplicacao: {
-                                    
+                                         
+                                          echo 'Config APP....'
+
                                                         }
                                  )
                 }
