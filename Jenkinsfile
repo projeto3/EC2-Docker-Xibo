@@ -74,7 +74,7 @@ pipeline {
                     //sh "ansible-playbook -i hosts -f play-deployApp.yml"
                 //}
                 echo 'Deploying....'
-            }
+           // }
         }
         
          stage('Test') {
