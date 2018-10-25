@@ -69,12 +69,12 @@ pipeline {
         
     stage('Deploy') {
 
-            //steps {
+            steps {
                 //dir('ansible/'){
                     //sh "ansible-playbook -i hosts -f play-deployApp.yml"
                 //}
                 echo 'Deploying....'
-           // }
+            }
         }
         
          stage('Test') {
