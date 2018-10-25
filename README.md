@@ -17,17 +17,23 @@ O projeto consiste na criação de um pipeline de entrega continua de infraestru
 - Procedimeto para configuração do ambiente
 	
 	- Instale um servidor jenkins - mais informações sobre a instalação (https://jenkins.io/doc/).
-	- Instale o terraform na maquina Jenkins - mais informações sobre a instalação (https://www.terraform.io/docs/index.html).
-	- Instale o ansible na máquina Jenkins - mais informações sobre a instalação (https://www.ansible.com/).
+	- Instale o terraform na maquina jenkins - mais informações sobre a instalação (https://www.terraform.io/docs/index.html).
+	- Instale o ansible na máquina jenkins - mais informações sobre a instalação (https://www.ansible.com/).
 	- Tenha uma conta na AWS - mais informações de como criar uma conta (https://aws.amazon.com/).
 	
 # Criando ACCESS_KEY na AWS
-- Para que o Jenkins possa acessar o recursos da AWS é necessária criar um access_key.
-Siga o passo a passo da documentação official - https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html
+- Para que o jenkins possa acessar o recursos da AWS é necessária criar um access_key.
+Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html
 
 # Configurando o Jenkins
-- Após a instalação do servidor Jenkins será necessários fazer alguns ajustes. Para que o Jenkins acesse a aws é necessário salvar o access_key em váriavel e depois exportar-la para todo sistema operacional do servidor jenkins.
-- Instale o seguintes plugins no jenkins
+- Após a instalação do servidor jenkins será necessários fazer alguns ajustes. Para que o jenkins acesse a aws é necessário salvar o access_key e o secret_key em váriavel e depois exportar-la para todo sistema operacional do servidor jenkins.
+- Faça acesso ssh a maquina do jenkins e exporte a seguintes variaveis:
+		
+	- export aws_acces_key=my_acces_key
+	- export aws_region=my_region
+	- export aws_secret_key=my_secret_key
+		
+- Instale os seguintes plugins no jenkins
 	- Amazon web services sdk
 	- Ansible plugin
 	- Blue ocean (visualização do pipeline)
