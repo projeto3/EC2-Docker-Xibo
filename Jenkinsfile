@@ -41,7 +41,7 @@ pipeline {
                                  )
                 }
             }
-        }
+        
         
         stage('Criando Instancia') {
                         steps {
@@ -120,5 +120,5 @@ pipeline {
 
         }
 
-
+}
 }
