@@ -1,1 +1,12 @@
+---
+- hosts: all
 
+  tasks:
+    - name: copy-file
+      copy: src=./deploy.sh dest=/tmp/deploy.sh
+
+    - name: Atributo
+      shell: chmod +x /tmp/deploy.sh
+
+    - name: start config
+      shell: /tmp/deploy.sh
