@@ -17,7 +17,7 @@ pipeline {
                                     
                                     Copiando_git:{
                        // sh "sudo terraform apply -auto-approve"
-                                     git url: 'https://github.com/projeto3/EC2-Docker.git'
+                                     git url: 'https://github.com/projeto3/EC2-Docker-Xibo.git'
 
                                             }
                                    
