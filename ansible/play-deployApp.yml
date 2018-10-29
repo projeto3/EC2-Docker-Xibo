@@ -1,0 +1,5 @@
+---
+- hosts: all
+
+  - name: Start service
+    shell: docker-compose up -d
