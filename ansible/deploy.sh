@@ -12,4 +12,4 @@ tar --strip 1 -zxvf xibo-docker.tar.gz
 
 cp config.env.template config.env
 
-sed -i '/MYSQL_PASSWORD/ s/MYSQL_PASSWORD=/MYSQL_PASSWORD=mypassword/g' config.env
+sed -i '/MYSQL_PASSWORD/ s/$/mypassword/' config.env
