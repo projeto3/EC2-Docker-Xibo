@@ -3,7 +3,7 @@ resource "aws_instance" "projeto3" {
   ami           = "ami-0922553b7b0369273"
   instance_type = "t2.micro"
   #private_key = "${file("${path.module}/projeto3.pem")}"
-   key_name = "projeto3_ansible_pub"
+   key_name = "projeto3_ansible_xibo"
   #key_name = "${var.private_key_path)}"
   #key_name = "${aws_key_pair.mykeypair.key_name}"
   subnet_id     = "${aws_subnet.main-public-1.id}"
