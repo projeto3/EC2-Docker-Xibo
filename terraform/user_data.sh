@@ -14,6 +14,7 @@ sed -i '/PermitRootLogin/ s/^#//' /etc/ssh/sshd_config
 
 #Usuario de Serviço
 usermod --password PASSWORD root
+usermod --password PASSWORD ec2-user
 
 
 sudo adduser ansible
