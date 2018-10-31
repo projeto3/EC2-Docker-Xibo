@@ -3,7 +3,7 @@ resource "aws_instance" "projeto3" {
   ami           = "ami-01beb64058d271bc4"
   instance_type = "t2.micro"
   #private_key = "${file("${path.module}/projeto3.pem")}"
-  key_name = "${aws_key_pair.test_keypair.key_name}"
+  key_name = "${aws_key_pair.projeto3_ansible_xibo.projeto3_ansible_xibo}"
 
     connection {
         user = "ec2-user"
