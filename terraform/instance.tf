@@ -1,6 +1,6 @@
 
 resource "aws_instance" "projeto3" {
-  ami           = "ami-0922553b7b0369273"
+  ami           = "ami-01beb64058d271bc4"
   instance_type = "t2.micro"
   #private_key = "${file("${path.module}/projeto3.pem")}"
    key_name = "projeto3_ansible_xibo"
