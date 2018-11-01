@@ -32,7 +32,7 @@ pipeline {
                              Configurando_Infra: {
                                    dir('terraform/') {
                                    sh 'cp /var/lib/jenkins/workspace/provider.tf .'
-                                   sh "sudo terraform init"
+                                   sh "sudo /usr/local/bin/terraform init"
                                    }   
                                  },
                                 Configurando_Aplicacao: {
