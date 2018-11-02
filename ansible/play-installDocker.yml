@@ -1,6 +1,9 @@
 ---
 - hosts: all
   
+  vars:
+         ansible_python_interpreter: "/usr/bin/env python2.7"
+  
   tasks:
   
       - name: Install docker
