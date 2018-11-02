@@ -2,9 +2,9 @@
 
 #Salva o endereço dns publico da instância
 aws_dns=$(cat terraform/aws_dns.txt)
-echo "$aws_dns" > ansible/hosts
+echo "$aws_dns"
 
-SERVICE_PORT=8080
+SERVICE_PORT=80
 
 echo "Realizando teste de conectividade..."
 ping -qc5 $aws_dns
