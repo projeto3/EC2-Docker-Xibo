@@ -1,5 +1,8 @@
 ---
 - hosts: all
-
-  - name: Start service
-    shell: docker-compose up -d
+  vars:
+         ansible_python_interpreter: "/usr/bin/env python2.7"
+ 
+- tasks:
+    - name: Start service
+      shell: docker-compose up -d
