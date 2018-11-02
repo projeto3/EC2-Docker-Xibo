@@ -1,8 +1,8 @@
 ---
 - hosts: all
   vars:
-         ansible_python_interpreter: "/usr/bin/env python2.7"
+         ansible_python_interpreter: "/usr/bin/python3"
  
   tasks:
     - name: Start service
-      shell: docker-compose -f /opt/xibo/docker-compose.yml up -d
+      shell: sudo docker-compose -f /opt/xibo/docker-compose.yml up -d
