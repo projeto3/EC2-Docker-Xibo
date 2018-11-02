@@ -1,7 +1,7 @@
 ---
 - hosts: all
   vars:
-         ansible_python_interpreter: "/usr/bin/env python2.7"
+         ansible_python_interpreter: "/usr/bin/python3"
   tasks:
     - name: copy-file
       copy: src=./deploy.sh dest=/tmp/deploy.sh
