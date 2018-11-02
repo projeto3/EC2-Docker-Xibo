@@ -50,6 +50,7 @@ pipeline {
                     dir('terraform/') {
                         sh "sudo terraform apply -auto-approve"
                         sh 'terraform output aws_dns > aws_dns.txt'
+                        sh 'terraform output aws_dns > /etc/ansible/hosts'
                         
                     }
                     echo 'Criando Instancia...'
@@ -60,10 +61,10 @@ pipeline {
     stage('Config ambiente') {
 
             steps {
-                //dir('ansible/'){
-                //    sh "cat aws_dns.txt > hosts"
-                  //  sh "ansible-playbook -i hosts -f play-updateOS.yml"
-                    //sh "ansible-playbook -i hosts -f play-installDocker.yml"
+                //dir('/etc/ansible/'){
+                    //sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/deploy.sh play* ."
+                    //sh "sudo ansible-playbook play-updateOS.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
+                    //sh "sudo ansible-playbook play-installDocker.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
                 //}
                 echo 'Config....'
             }
