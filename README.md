@@ -48,6 +48,7 @@ Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_
 	- Blue ocean (visualização do pipeline)
 	- Git plugin
 	- Terraform plugin
+	- Ansible
 
 
 
