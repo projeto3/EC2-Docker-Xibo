@@ -2,7 +2,7 @@
 # Pipeline de entrega continua de infraestrutura na AWS.
 Repositório da disciplina projeto integrador III.
 
-O projeto consiste na criação de um pipeline de entrega continua de infraestrutra na aws.
+O projeto consiste na criação de um pipeline de entrega continua de infraestrutra na aws baseado na metodologia the twelve-factor App (12 fatores).
 
 - Neste repositorio conterá os arquivos e procedimentos necessários para cria um pipeline de entrega continua de uma aplicação e sua infraestrutura utilizando as tecnologias Github, Jenkins, Terraform, Ansible, Shell Script, Docker, Docker-compose e Amazon Web Services.
 
@@ -22,13 +22,22 @@ O projeto consiste na criação de um pipeline de entrega continua de infraestru
 	- Tenha uma conta na AWS - mais informações de como criar uma conta (https://aws.amazon.com/).
 	
 # Criando ACCESS_KEY na AWS
-- Para que o jenkins possa acessar o recursos da AWS é necessária criar um access_key.
+- Para que o jenkins possa acessar os recursos da AWS é necessária criar um access_key.
 Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html
 
 # Configurando o Jenkins
-- Após a instalação do servidor jenkins será necessários fazer alguns ajustes. Para que o jenkins acesse a aws é necessário salvar o access_key e o secret_key em váriavel e depois exportar-la para todo sistema operacional do servidor jenkins.
-- Faça acesso ssh a maquina do jenkins e exporte a seguintes variaveis:
-		
+- Após a instalação do servidor jenkins será necessários fazer alguns ajustes. Para que o jenkins acesse a aws é necessário salvar o access_key e o secret_key e region em um arquivo chamado provider.tf, também é preciso salvar essas informaçções em váriavel e depois exportar-la para todo sistema operacional do servidor jenkins.
+- Faça acesso ssh a maquina do jenkins e crie o arquivo provider.tf no diretorio /var/lib/jenkins/workspaces/diretorio_projeto e depois exporte as variaveis.
+
+- Arquivo provider.tf
+
+		provider "aws" {
+  			access_key = "my_access_key"
+  			secret_key = "my_secrte_key"
+  			region     = "my_region"
+		}
+
+- Variveis	
 	- export aws_acces_key=my_acces_key
 	- export aws_region=my_region
 	- export aws_secret_key=my_secret_key
@@ -48,12 +57,7 @@ Executando os procedimentos acima,será criado uma instancia EC2 na AWS.
 
 Para acessar a aplicação que foi utilizada para teste:
 	
-	Acesse o endereço http://endereço_publico_da_instancia_ec2:8080 (este app executa um arquivo index.php que conecta ao banco, insere dados e exibe os dados no browser).
-	Usando o MySQL Workbench para acessar o banco:
-		IP: IP_PUBLICO_DA_EC2
-		user: docker
-		senha: docker
-		porta: 3306
+	Acesse o endereço http://endereço_publico_da_instancia_ec2.
 
 
 # Integrantes:
