@@ -50,7 +50,8 @@ pipeline {
                     dir('terraform/') {
                         sh "sudo terraform apply -auto-approve"
                         sh 'terraform output aws_dns > aws_dns.txt'
-                        sh 'terraform output aws_dns > /etc/ansible/hosts'
+                        sh 'terraform output aws_dns > hosts'
+                        sh 'sudo mv /etc/ansible/hosts /etc/ansible/hosts.ori || sudo cp hosts /etc/ansible'
                         
                     }
                     echo 'Criando Instancia...'
