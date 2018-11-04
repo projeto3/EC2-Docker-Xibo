@@ -69,8 +69,8 @@ pipeline {
                     //sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/deploy.sh ."
                     //sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/play-* ."
                     sh 'sudo ansible-playbook play-updateOS.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu'
-                    //sh "sudo ansible-playbook play-installDocker.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
-                    //sh "sudo ansible-playbook play-configApp.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
+                    //sh 'sudo ansible-playbook play-installDocker.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu'
+                    //sh 'sudo ansible-playbook play-configApp.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu'
                 }
                 echo 'Config....'
             }
@@ -79,8 +79,8 @@ pipeline {
     stage('Deploy') {
 
             steps {
-                //dir('/etc/ansible/'){
-                    //sh "sudo ansible-playbook play-deployApp.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
+                //dir('ansible/'){
+                    //sh 'sudo ansible-playbook play-deployApp.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu'
                 //}
                 echo 'Deploying....'
             }
