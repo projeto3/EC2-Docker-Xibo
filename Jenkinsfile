@@ -51,8 +51,8 @@ pipeline {
                         sh "sudo terraform apply -auto-approve"
                         sh 'terraform output aws_dns > aws_dns.txt'
                         sh 'terraform output aws_dns > hosts'
-                        //Este comando só precisa executar quando existir o arquivos hosts original
-                        sh 'sudo mv /etc/ansible/hosts /etc/ansible/hosts.ori'
+                        //Este comando só precisa executar quando existir o arquivo hosts
+                        //sh 'sudo mv /etc/ansible/hosts /etc/ansible/hosts.ori'
                         sh 'sudo cp hosts /etc/ansible/'
                         
                     }
@@ -64,12 +64,13 @@ pipeline {
     stage('Config ambiente') {
 
             steps {
-                //dir('/etc/ansible/'){
-                    //sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/deploy.sh play* ."
+                dir('/etc/ansible/'){
+                    sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/deploy.sh ."
+                    sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/play-* ."
                     //sh "sudo ansible-playbook play-updateOS.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
                     //sh "sudo ansible-playbook play-installDocker.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
                     //sh "sudo ansible-playbook play-configApp.yml -i hosts --private-key "~/.ssh/projeto3.pem" -s -u ubuntu"
-                //}
+                }
                 echo 'Config....'
             }
         }
