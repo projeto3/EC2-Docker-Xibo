@@ -51,8 +51,8 @@ pipeline {
                         sh "sudo terraform apply -auto-approve"
                         sh 'terraform output aws_dns > aws_dns.txt'
                         sh 'terraform output aws_dns > hosts'
-                        //Este comando só precisa executar a primeira vez, depois não precisa renomear o arquivo novamente
-                        //sh 'sudo mv /etc/ansible/hosts /etc/ansible/hosts.ori'
+                        //Este comando só precisa executar quando existir o arquivos hosts original
+                        sh 'sudo mv /etc/ansible/hosts /etc/ansible/hosts.ori'
                         sh 'sudo cp hosts /etc/ansible/'
                         
                     }
