@@ -1,15 +1,11 @@
 ---
 - hosts: all
-  gather_facts: false
   
   vars:
          ansible_python_interpreter: "/usr/bin/python3"
   
   tasks:
-   
-   - pause:
-        minutes: 1
-        
+          
    - name: Atualização de repo debian
      apt: update_cache=yes
      when: ansible_os_family == "Debian"
