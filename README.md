@@ -2,7 +2,7 @@
 # Pipeline de entrega continua de infraestrutura na AWS.
 Repositório da disciplina projeto integrador III.
 
-O projeto consiste na criação de um pipeline de entrega continua de infraestrutra na aws baseado na metodologia the twelve-factor App (12 fatores).
+O projeto consiste na criação de um pipeline de entrega contínua de infraestrututra na aws baseando-se na metodologia the twelve-factor App (12 fatores).
 
 - Neste repositorio conterá os arquivos e procedimentos necessários para cria um pipeline de entrega continua de uma aplicação e sua infraestrutura utilizando as tecnologias Github, Jenkins, Terraform, Ansible, Shell Script, Docker, Docker-compose e Amazon Web Services.
 
