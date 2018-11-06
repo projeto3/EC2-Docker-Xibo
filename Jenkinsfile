@@ -63,7 +63,7 @@ pipeline {
             steps {
                 dir('ansible/'){
                     sh 'sudo cp ../terraform/hosts .'
-                    sh 'echo "Aguardando serviço ssh iniciar...'
+                    sh 'echo "Aguardando serviço ssh iniciar..."'
                     sh 'sleep 60'
                     sh 'sudo ansible-playbook play-updateOS.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu'
                     sh 'sudo ansible-playbook play-installDocker.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu'
