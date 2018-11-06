@@ -88,6 +88,7 @@ pipeline {
 
             steps {
                  sh 'sudo chmod +x teste.sh'
+                 sh 'sleep 30'
                  sh './teste.sh'
                  echo 'Testing..'
              }
