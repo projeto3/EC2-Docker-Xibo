@@ -27,7 +27,7 @@ sleep 1
 STATUS_CODE=$(curl --write-out %{http_code} --silent --output /dev/null $aws_dns:$SERVICE_PORT)
 
 #Verifica se a resposta do HTTP GET é igual a 200, caso verdadeiro a requisiço foi um sucesso.
-if [ $STATUS_CODE -eq 200 ]; then
+if [ $STATUS_CODE -eq 302 ]; then
 	echo -e "Teste de requisição....\033[0;32mOK\033[0m :: $(date +%F\ %T)"
 	echo "URL da aplicação http://$aws_dns:$SERVICE_PORT"
 else
