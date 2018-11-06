@@ -16,7 +16,7 @@ pipeline {
                                     },
                                     
                                     Copiando_git:{
-                       // sh "sudo terraform apply -auto-approve"
+                       
                                      git url: 'https://github.com/projeto3/EC2-Docker-Xibo.git'
 
                                             }
@@ -51,10 +51,7 @@ pipeline {
                         sh "sudo terraform apply -auto-approve"
                         sh 'terraform output aws_dns > aws_dns.txt'
                         sh 'terraform output aws_dns > hosts'
-                        //Este comando só precisa executar quando existir o arquivo hosts
-                        //sh 'sudo mv /etc/ansible/hosts /etc/ansible/hosts.ori'
-                        //sh 'sudo cp hosts /etc/ansible/'
-                        
+                                             
                     }
                     echo 'Criando Instancia...'
             }
@@ -66,10 +63,8 @@ pipeline {
             steps {
                 dir('ansible/'){
                     sh 'sudo cp ../terraform/hosts .'
-                    sh 'echo "Aguradando..."'
-                    sh 'sleep 60'
-                    //sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/deploy.sh ."
-                    //sh "sudo cp /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/ansible/play-* ."
+                    sh 'echo "Aguardando serviço ssh iniciar...'
+                    sh 'sleep 60' //pausa para que a instãncia possa liberar o serviço ssh
                     sh 'sudo ansible-playbook play-updateOS.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu'
                     sh 'sudo ansible-playbook play-installDocker.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu'
                     
@@ -127,7 +122,7 @@ pipeline {
                 dir('terraform/') {
                 sh "sudo terraform destroy -force"
                 }
-                echo 'apagando repo....'
+                echo 'Apagando repo....'
             }
 
         }
