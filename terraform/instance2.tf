@@ -20,10 +20,10 @@ tags {
         Gerente_do_Projeto = "Professor Pablo Menezes"
     }
 }
-output "aws_ip" {
+output "aws_ip_2" {
     value = "${aws_instance.projeto3_2.public_ip}"
 }
 
-output "aws_dns" {
+output "aws_dns_2" {
     value = "${aws_instance.projeto3_2.public_dns}"
 }
