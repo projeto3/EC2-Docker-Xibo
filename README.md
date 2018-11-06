@@ -4,7 +4,7 @@ Repositório da disciplina projeto integrador III.
 
 O projeto consiste na criação de um pipeline de entrega contínua de infraestrututra na aws baseando-se na metodologia the twelve-factor App (12 fatores).
 
-- Neste repositorio conterá os arquivos e procedimentos necessários para cria um pipeline de entrega continua de uma aplicação e sua infraestrutura utilizando as tecnologias Github, Jenkins, Terraform, Ansible, Shell Script, Docker, Docker-compose e Amazon Web Services.
+- Neste repositorio conterá os arquivos e procedimentos necessários para criar um pipeline de entrega continua de uma aplicação e sua infraestrutura utilizando as tecnologias Github, Jenkins, Terraform, Ansible, Shell Script, Docker, Docker-compose e Amazon Web Services.
 
 - Listagem de diretórios e arquivos:
 		
@@ -26,8 +26,9 @@ O projeto consiste na criação de um pipeline de entrega contínua de infraestr
 Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html
 
 # Configurando o Jenkins
-- Após a instalação do servidor jenkins será necessários fazer alguns ajustes. Para que o jenkins acesse a aws é necessário salvar o access_key e o secret_key e region em um arquivo chamado provider.tf, também é preciso salvar essas informaçções em váriavel e depois exportar-la para todo sistema operacional do servidor jenkins.
-- Faça acesso ssh a maquina do jenkins e crie o arquivo provider.tf no diretorio /var/lib/jenkins/workspaces/diretorio_projeto e depois exporte as variaveis.
+- Após a instalação do servidor jenkins será necessários fazer alguns ajustes. Para que o jenkins acesse a aws é necessário salvar o access_key, secret_key e region em um arquivo chamado provider.tf, também é preciso salvar essas informaçções em váriavel e depois exportar-la para todo sistema operacional do servidor jenkins.
+- Faça acesso ssh a maquina do jenkins e crie o arquivo provider.tf no diretorio /var/lib/jenkins/workspaces/diretorio_projeto
+- Depois exporte as variaveis.
 
 - Arquivo provider.tf
 
@@ -49,16 +50,6 @@ Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_
 	- Git plugin
 	- Terraform plugin
 	- Ansible
-
-
-
-
-
-Executando os procedimentos acima,será criado uma instancia EC2 na AWS.
-
-Para acessar a aplicação que foi utilizada para teste:
-	
-	Acesse o endereço http://endereço_publico_da_instancia_ec2.
 
 
 # Integrantes:
