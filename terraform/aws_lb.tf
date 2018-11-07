@@ -1,5 +1,5 @@
 resource "aws_elb" "lb" {
-    name_prefix = "LB_Projeto3"
+    name_prefix = "LB"
     subnets = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-1.id}"]
     health_check {
         healthy_threshold = 2
