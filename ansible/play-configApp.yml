@@ -6,9 +6,6 @@
     - name: copy-file
       copy: src=./deploy.sh dest=/tmp/deploy.sh
       
-    - name: copy docker-compose
-      copy: src=../docker/wordpress/docker-compose.yml dest=/tmp/docker-compose.yml
-
     - name: Atributo
       shell: chmod +x /tmp/deploy.sh
 
