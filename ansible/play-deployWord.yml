@@ -5,4 +5,4 @@
  
   tasks:
     - name: Start service
-      shell: sudo docker-compose docker-compose.yml up -d
+      shell: sudo docker-compose up -d
