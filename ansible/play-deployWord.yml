@@ -5,4 +5,4 @@
  
   tasks:
     - name: Start service
-      shell: sudo docker-compose -f /var/lib/jenkins/workspace/ProjetoIII_master-RIIQQCSH57GWCVSXSFF23DWD5M4D34Q7KPYW67VQRZGOWEJNAQFQ/docker/wordpress/docker-compose.yml up -d
+      shell: sudo docker-compose docker-compose.yml up -d
