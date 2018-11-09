@@ -1,4 +1,7 @@
-
-
+---
+- hosts: all
+  vars:
+         ansible_python_interpreter: "/usr/bin/python3"
+  tasks:
     - name: copy docker-compose
       copy: src=../docker/wordpress/docker-compose.yml dest=/tmp/docker-compose.yml
