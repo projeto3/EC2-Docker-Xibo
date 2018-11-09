@@ -1,0 +1,4 @@
+
+
+    - name: copy docker-compose
+      copy: src=../docker/wordpress/docker-compose.yml dest=/tmp/docker-compose.yml
