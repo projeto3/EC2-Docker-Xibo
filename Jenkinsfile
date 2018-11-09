@@ -79,7 +79,7 @@ pipeline {
                 dir('ansible/'){
                      //sh 'sudo ansible-playbook play-configApp.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu'
                      //sh 'sudo ansible-playbook play-deployApp.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu'
-                     sh 'sudo ansible-playbook play-deployWord.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu
+                     sh 'sudo ansible-playbook play-deployWord.yml -i hosts --private-key "/home/ubuntu/.ssh/projeto3.pem" -s -u ubuntu'
                 }
                 echo 'Deploying....'
             }
