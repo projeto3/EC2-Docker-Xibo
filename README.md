@@ -1,4 +1,4 @@
-# Pojeto Integrador III
+# Projeto Integrador III
 # Pipeline de entrega continua de infraestrutura na AWS.
 Repositório da disciplina projeto integrador III.
 
