@@ -49,13 +49,4 @@ Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_
 	- Blue ocean (visualização do pipeline)
 	- Git plugin
 	- Terraform plugin
-	- Ansible
-
-
-# Integrantes:
-	
-	Anderson dos Santos Farias
-	- Linkedin: https://www.linkedin.com/in/andersonfariass/
-	Elvis de Jesus Gois
-	Jodemi Cruz Santos
-	- Linkedin: https://www.linkedin.com/in/jodemi-cruz-santos-67b97431/	
+	- Ansible	
