@@ -1,6 +1,6 @@
 
 resource "aws_instance" "projeto3" {
-  ami           = "ami-063aa838bd7631e0b"
+  ami           = "ami-02354e95b39ca8dec"
   instance_type = "t2.micro"
   #private_key = "${file("${path.module}/projeto3.pem")}"
    key_name = "testejk"
