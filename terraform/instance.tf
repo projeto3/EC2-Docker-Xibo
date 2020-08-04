@@ -18,7 +18,7 @@ resource "aws_instance" "projeto3" {
   #aws_security_group = "sg-0b70b9d3a1ae3add6"
   
   user_data = "${file("${path.module}/user_data.sh")}"
-tags {
+tags = {
         Name = "DEV Teste Infraesturura Agil"
         Projeto = "Infraestrutura como codigo"
         Curso = "Redes de Computadores"
