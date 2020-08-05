@@ -78,8 +78,8 @@ pipeline {
 
             steps {
                 dir('ansible/'){
-                     //sh 'sudo ansible-playbook play-configApp.yml -i hosts --private-key "/home/ubuntu/.ssh/testejk.pem" -s -u ec2-user'
-                     //sh 'sudo ansible-playbook play-deployApp.yml -i hosts --private-key "/home/ubuntu/.ssh/testejk.pem" -s -u ec2-user'
+                     //sh 'sudo ansible-playbook play-configApp.yml -i hosts --private-key "/home/ec2-user/.ssh/teste-jenkins.pem" -u ec2-user'
+                     //sh 'sudo ansible-playbook play-deployApp.yml -i hosts --private-key "/home/ec2-user/.ssh/teste-jenkins.pem" -u ec2-user'
                      sh 'sudo ansible-playbook play-configWord.yml -i hosts --private-key "/home/ec2-user/.ssh/teste-jenkins.pem" -u ec2-user'
                      sh 'sudo ansible-playbook play-deployWord.yml -i hosts --private-key "/home/ec2-user/.ssh/teste-jenkins.pem" -u ec2-user'
                 }
