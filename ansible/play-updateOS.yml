@@ -6,16 +6,18 @@
   
   tasks:
           
-   - name: Atualização de repo debian
-     apt: update_cache=yes
-     when: ansible_os_family == "Debian"
+   #- name: Atualização de repo debian
+   #  apt: update_cache=yes
+   #  when: ansible_os_family == "Debian"
 
-   - name: Atualização debian
-     apt: upgrade=dist
-     when: ansible_os_family == "Debian"
+  # - name: Atualização debian
+  #   apt: upgrade=dist
+  #   when: ansible_os_family == "Debian"
    
-   - name: Atualização de repo redhat
-     yum: name=* state=latest
-     when: ansible_os_family == "RedHat"
+  # - name: Atualização de repo redhat
+  #   yum: name=* state=latest
+  #   when: ansible_os_family == "RedHat"
+  - name: "Atualizando OS"
+    shell: sudo yum update -y
  
 
