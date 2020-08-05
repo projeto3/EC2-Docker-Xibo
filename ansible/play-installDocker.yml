@@ -6,14 +6,20 @@
   
   tasks:
   
-      - name: Install docker
-        shell: curl -fsSL https://get.docker.com | sh
-
+      - name: "Instalando docker"
+        shell: sudo yum install docker -y
+        
       - name: Install docker-compose
-        shell: curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+        shell: sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null
 
-      - name: Config docker-compose
+      - name: "Config docker-compose"
         shell: sudo chmod +x /usr/local/bin/docker-compose
         
-      - name: Start service docker
-        shell: sudo service docker start
+      - name: "Instalando docker-compose"
+       shell: sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+        
+      - name: "Iniciando servico do docker"
+        shell: sudo systemctl start docker
+      
+      - name: "Configurando docker no boot do SO"
+        shell: sudo systemctl enable docker
