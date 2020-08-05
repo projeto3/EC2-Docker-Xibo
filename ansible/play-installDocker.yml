@@ -16,7 +16,7 @@
         shell: sudo chmod +x /usr/local/bin/docker-compose
         
       - name: "Instalando docker-compose"
-       shell: sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+        shell: sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
         
       - name: "Iniciando servico do docker"
         shell: sudo systemctl start docker
