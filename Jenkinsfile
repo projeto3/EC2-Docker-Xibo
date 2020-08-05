@@ -31,8 +31,9 @@ pipeline {
                   parallel(
                              Configurando_Infra: {
                                    dir('terraform/') {
-                                   sh 'cp /var/lib/jenkins/workspace/provider.tf .'
+                                   sh 'cp /var/lib/jenkins/workspace/prov.tf .'
                                    sh "sudo terraform init"
+                                   sh "sudo terraform plan"
                                    }   
                                  },
                                 Configurando_Aplicacao: {
