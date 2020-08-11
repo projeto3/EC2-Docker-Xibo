@@ -39,7 +39,7 @@ Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_
 		}
 
 - Configure o ansible para ignorar a verificação de autenticidade do SSH na primeira conexão
-	- Vá ate o aqrquivo /etc/ansible/ansible.cfg e edite/adcione a seguinte linha
+	- Vá ate o aqrquivo /etc/ansible/ansible.cfg e edite/adicione a seguinte linha
 		- host_key_checking = False
 		
 - Instale os seguintes plugins no jenkins
