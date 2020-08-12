@@ -39,7 +39,7 @@ Siga o passo a passo da documentação oficial - https://docs.aws.amazon.com/pt_
 
 - Configure o ansible para ignorar a verificação de autenticidade do SSH na primeira conexão, vá ate o aqrquivo /etc/ansible/ansible.cfg e edite/adicione a seguinte linha:
 		- host_key_checking = False
-- Para permitir que o ansible se conecte com as novas instâncias criadas é necessário fazer o upload da chave.pem que será usada para conexão ssh no dirétorio ~/.ssh/chave.pem do servidor Jenkins, pode ser feito usando o software "Bitvise SSH Client" (https://www.bitvise.com/ssh-client-download) no Windows ou usando o cliente scp no linux com o comando "sudo scp -i jenkins.pem  chave.pem  user@myiphost:~/.ssh/chave.pem".
+- Para permitir que o ansible se conecte com as novas instâncias criadas é necessário fazer o upload da chave.pem que será usada para conexão ssh no dirétorio "~/.ssh/chave.pem" do servidor Jenkins, pode ser feito usando o software "Bitvise SSH Client" (https://www.bitvise.com/ssh-client-download) no Windows ou usando o cliente scp no linux com o comando "sudo scp -i jenkins.pem  chave.pem  user@myiphost:~/.ssh/chave.pem".
  
 		
 - Você pode se deparar com o seguinte erro ao tentar executar sua primeira build no Jenkis "sudo: no tty present and no askpass program specified".
